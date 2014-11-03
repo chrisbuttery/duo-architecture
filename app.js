@@ -4,7 +4,6 @@
 
 var Duo = require('duo');
 var fs = require('fs');
-var fs = require('fs');
 var join = require('path').join;
 var write = require('fs').writeFileSync;
 
@@ -21,7 +20,7 @@ var jsx = require('duo-jsx');
  */
 
 var dev = process.env.NODE_ENV === 'development';
-var src = __dirname+'/lib'
+var src = __dirname+'/lib/boot/'
 var root = process.cwd();
 var dest = './build/';
 var out = join(root, dest);
@@ -34,7 +33,7 @@ var out = join(root, dest);
 
 var js = Duo(__dirname)
   .development(dev)
-  .entry('./lib/boot/index.js')
+  .entry(src + 'index.js')
   .use(jsx())
   .buildTo(dest);
 
@@ -44,7 +43,7 @@ var js = Duo(__dirname)
  */
 
 var css = Duo(__dirname)
-  .entry('./lib/boot/index.css')
+  .entry(src + 'index.css')
   .buildTo(dest)
   .use(myth())
   .copy(!dev);
