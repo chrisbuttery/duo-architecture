@@ -1,0 +1,23 @@
+{
+  "name": "duo-architecture",
+  "version": "1.0.0",
+  "description": "A fronted architecture for duo(1) and duo-test(1)",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "Chris Buttery",
+  "license": "MIT",
+  "dependencies": {
+    "duo-test": "^0.3.11",
+    "batch": "^0.5.1",
+    "clean-css": "^2.2.16",
+    "duo": "^0.8.5",
+    "duo-jsx": "^1.0.3",
+    "duo-myth": "0.0.3",
+    "uglify-js": "^2.4.15"
+  }
+}
