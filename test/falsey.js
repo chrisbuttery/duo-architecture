@@ -2,7 +2,7 @@
 var assert = require('component/assert');
 var falsey = require('../lib/falsey');
 
-describe('library.falsey()', function(){
+describe('falsey', function(){
   it('should return false', function(){
     assert(false == falsey());
   })

@@ -35,6 +35,7 @@ var out = join(root, dest);
 var js = Duo(__dirname)
   .development(dev)
   .entry('index.js')
+  .use(jsx())
   .buildTo(dest);
 
 
