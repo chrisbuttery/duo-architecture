@@ -1,7 +1,7 @@
 BUILD = build/tests.js
 T = ./node_modules/duo-test/bin/duo-test
 TESTS = $(filter-out test/tests.js, $(wildcard test/*.js))
-SRC = $(wildcard ./lib/main.js lib/**/*.js)
+SRC = $(wildcard ./lib/boot/index.js lib/**/*.js)
 
 $(BUILD): test/tests.js
 	duo -u duo-jsx --root . --type js < $< > $@
@@ -22,7 +22,7 @@ test-saucelabs: $(BUILD)
 	@$(T) saucelabs --build build/tests.js -b safari:6..7
 
 clean:
-	rm -rf test/tests.js build/build.js build/build.css components
+	rm -rf test/tests.js build/tests.js build/build.js build/build.css components
 
 build:
 	NODE_ENV=production node app.js

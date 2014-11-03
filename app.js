@@ -34,7 +34,7 @@ var out = join(root, dest);
 
 var js = Duo(__dirname)
   .development(dev)
-  .entry('index.js')
+  .entry('./lib/boot/index.js')
   .use(jsx())
   .buildTo(dest);
 
@@ -44,7 +44,7 @@ var js = Duo(__dirname)
  */
 
 var css = Duo(__dirname)
-  .entry('index.css')
+  .entry('./lib/boot/index.css')
   .buildTo(dest)
   .use(myth())
   .copy(!dev);
