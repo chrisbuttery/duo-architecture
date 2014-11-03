@@ -1,20 +1,21 @@
-duo-architecture
-================
+# duo-architecture
 
-# Quickstart guide
+WIP
+
+## Quickstart guide
 
 ###Build
 
 This project is using a simple Makefile as a task runner.  
 In terminal, from the root of the app run:
 
-#### build in a development environment
+##### build in a development environment
 
 ```
 $ make dev
 ```
 
-#### build in a production environment
+##### build in a production environment
 
 ```
 $ make build
@@ -41,13 +42,13 @@ $ brew install watch
 
 _Have you installed OS X 10.10 Yosemite and Homebrew is broken? Read this: http://jcvangent.com/fixing-homebrew-os-x-10-10-yosemite/_
 
-**Usage**
+##### Usage
 
 ```
 $ watch make dev
 ```
 
-###Testing
+# Testing
 
 Run tests via PhantomJS.
 
