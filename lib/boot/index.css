@@ -1,7 +1,5 @@
-:root {
-  --red: #ff0000;
-}
+@import '../theme';
 
 body {
-  background: var(--red);
+  background: var(--Sushi);
 }
