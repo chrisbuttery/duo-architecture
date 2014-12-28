@@ -1,5 +1,6 @@
-TESTFILE = build/tests.js
+D = ./node_modules/.bin/duo
 T = ./node_modules/.bin/duo-test
+TESTFILE = build/tests.js
 TESTS = $(filter-out test/tests.js, $(wildcard test/*.js))
 SRC = $(wildcard ./lib/boot/index.js lib/**/*.js)
 
@@ -18,8 +19,9 @@ dev:
 	@NODE_ENV=development node app.js
 
 # Build the tests
+# duo -u duo-jsx --root . --type js < test/tests.js > build/tests.js
 $(TESTFILE): test/tests.js
-	duo -u duo-jsx --root . --type js < $< > $@
+	@$(D) -u duo-jsx --root . --type js < $< > $@
 
 # generate a test/tests.js file for duo to reference
 test/tests.js: $(SRC) $(TESTS)
