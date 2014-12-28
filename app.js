@@ -13,6 +13,7 @@ var CleanCSS = require('clean-css');
 var cleancss = new CleanCSS();
 var Batch = require('batch');
 var jsx = require('duo-jsx');
+var to5 = require('duo-6to5');
 
 
 /**
@@ -35,6 +36,7 @@ var js = Duo(__dirname)
   .development(dev)
   .entry(src + 'index.js')
   .use(jsx())
+  .use(to5())
   .buildTo(dest);
 
 
@@ -63,6 +65,6 @@ batch.end(function(err, res){
   var js = uglify.minify(res.shift(), { fromString: true }).code;
   write(join(out, 'build.js'), js);
 
-  var css = cleancss.minify(myth(res.shift()));
+  var css = cleancss.minify(myth(res.shift())).styles;
   write(join(out, 'build.css'), css);
 });
