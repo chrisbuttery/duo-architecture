@@ -39,7 +39,11 @@ $ ruby -run -e httpd . -p 8100
 
 ###Watch
 
-Added to this project is [watch(1)](https://github.com/tj/watch) - a tiny C program used to periodically execute a command.
+[watch(1)](https://github.com/tj/watch) t- a tiny C program used to periodically execute a command.
+
+To use it, clone `watch(1)` to the root of this repo:
+
+`git clone git@github.com:tj/watch.git`
 
 **Usage**
 
