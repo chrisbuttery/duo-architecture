@@ -3,13 +3,14 @@
   <head>
     <title>Tests</title>
     <link rel="stylesheet" href="https://rawgit.com/visionmedia/mocha/master/mocha.css">
-    <script src="http://rawgit.com/visionmedia/mocha/master/mocha.js"></script>
+    <script src="https://rawgit.com/visionmedia/mocha/master/mocha.js"></script>
     <script src="/duotest.js"></script>
   </head>
   <body>
     <div class="js-sandbox" style="display: none"></div>
     <div id="mocha"></div>
     <script>mocha.setup({ ui: 'bdd', timeout: 100 })</script>
+    <script src="./vendor/sinon.js"></script>
     <script src="./polyfill/function.prototype.bind.js"></script>
     <script src="../build/tests.js"></script>
     <script>duotest(mocha.run())</script>

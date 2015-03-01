@@ -1,8 +1,10 @@
-var assert = require('component/assert');
-var sum = require('../lib/sum');
+"use strict";
+
+const sum = require('../lib/sum');
+const assert = require('component/assert@0.5.0');
 
 describe('sum', function() {
  it('should adds 1 + 2 to equal 3', function() {
-   assert.equal(sum(1, 2), 3);
+   assert(sum(1, 2) === 3);
  });
 });

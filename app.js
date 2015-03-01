@@ -12,8 +12,7 @@ var myth = require('myth');
 var CleanCSS = require('clean-css');
 var cleancss = new CleanCSS();
 var Batch = require('batch');
-var jsx = require('duo-jsx');
-var to5 = require('duo-6to5');
+var babel = require('duo-babel');
 
 
 /**
@@ -27,7 +26,6 @@ var dest = './build/';
 var out = join(root, dest);
 
 
-
 /**
  * JS.
  */
@@ -35,8 +33,7 @@ var out = join(root, dest);
 var js = Duo(__dirname)
   .development(dev)
   .entry(src + 'index.js')
-  .use(jsx())
-  .use(to5())
+  .use(babel())
   .buildTo(dest);
 
 

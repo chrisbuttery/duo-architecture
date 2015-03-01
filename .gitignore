@@ -1,6 +1,7 @@
 .DS_Store
-build.js
 components/
 node_modules/
 test/tests.js
 build/*
+npm-debug.log
+.node-version

@@ -1,25 +1,35 @@
 {
   "name": "duo-architecture",
-  "version": "1.0.0",
-  "description": "A fronted architecture for duo(1) and duo-test(1)",
+  "version": "0.0.0",
+  "description": "A example architure using duo(1) and duo-test(1)",
   "main": "app.js",
   "directories": {
     "test": "test"
   },
+  "dependencies": {
+    "batch": "^0.5.2",
+    "bluebird": "^2.9.12",
+    "clean-css": "^3.0.10",
+    "debug": "^2.1.1",
+    "duo": "^0.9.4",
+    "duo-babel": "4.0.0",
+    "duo-test": "^0.3.13",
+    "myth": "^1.3.0",
+    "uglify-js": "^2.4.16"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "make test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisbuttery/duo-architecture.git"
+  },
   "author": "Chris Buttery",
-  "license": "MIT",
-  "dependencies": {
-    "batch": "^0.5.2",
-    "clean-css": "^3.0.4",
-    "duo": "^0.9.1",
-    "duo-6to5": "1.0.0",
-    "duo-jsx": "^1.0.3",
-    "duo-test": "^0.3.13",
-    "myth": "^1.2.1",
-    "uglify-js": "^2.4.16",
-    "debug": "^2.1.1"
-  }
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/chrisbuttery/duo-architecture/issues"
+  },
+  "homepage": "https://github.com/chrisbuttery/duo-architecture",
+  "private": true
 }
